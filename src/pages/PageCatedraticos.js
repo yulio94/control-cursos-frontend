@@ -1,13 +1,18 @@
 import React from "react";
+import ListCatedraticos from "../components/ListCatedraticos";
 
-function PageCatedraticos(props) {
-  return (
-    <>
-      <h1>Gesti&oacute;n Catedr&aacute;ticos</h1>
-      <div className="divider"></div>
-      {props.children}
-    </>
-  );
+class PageCatedraticos extends React.Component {
+  render() {
+    return (
+      <>
+        <br />
+        <h1>Gesti&oacute;n Catedr&aacute;ticos</h1>
+        <div className="divider"></div>
+        <br />
+        <ListCatedraticos></ListCatedraticos>
+      </>
+    );
+  }
 }
 
 export default PageCatedraticos;
