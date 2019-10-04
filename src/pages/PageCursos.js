@@ -1,10 +1,10 @@
 import React from "react";
-import ListCatedraticos from "../components/ListCatedraticos";
+import ListarCursos from "../components/ListarCursos";
 import api from "../api";
 import PageLoading from "../pages/PageLoading";
 import PageError from "../pages/PageError";
 
-class PageCatedraticos extends React.Component {
+class PageCursos extends React.Component {
   state = {
     loading: false,
     error: null,
@@ -18,7 +18,7 @@ class PageCatedraticos extends React.Component {
   fetchData = async () => {
     this.setState({ loading: true, error: null });
     try {
-      const data = await api.catedraticos.list();
+      const data = await api.cursos.list();
       this.setState({ loading: false, data: data });
     } catch (error) {
       this.setState({ loading: false, error: error });
@@ -37,13 +37,13 @@ class PageCatedraticos extends React.Component {
     return (
       <>
         <br />
-        <h1>Gesti&oacute;n catedr&aacute;ticos</h1>
+        <h1>Gesti&oacute;n cursos</h1>
         <div className="divider"></div>
         <br />
-        <ListCatedraticos data={this.state.data} />
+        <ListarCursos data={this.state.data} />
       </>
     );
   }
 }
 
-export default PageCatedraticos;
+export default PageCursos;

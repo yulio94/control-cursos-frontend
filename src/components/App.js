@@ -7,6 +7,9 @@ import Layout from "./Layout";
 import Home from "./Home";
 import Login from "./Login";
 import PageCatedraticos from "../pages/PageCatedraticos";
+import PageCursos from "../pages/PageCursos";
+import PageHorarios from "../pages/PageHorarios";
+import PageCarreras from "../pages/PageCarreras";
 
 function App() {
   return (
@@ -16,9 +19,9 @@ function App() {
         <Layout>
           <Route exact path="/" component={Home} />
           <Route exct path="/catedraticos" component={PageCatedraticos} />
-          <Route exct path="/cursos" />
-          <Route exct path="/carreras" />
-          <Route exct path="/horarios" />
+          <Route exct path="/cursos" component={PageCursos} />
+          <Route exct path="/carreras" component={PageCarreras} />
+          <Route exct path="/horarios" component={PageHorarios} />
         </Layout>
       </Switch>
     </BrowserRouter>

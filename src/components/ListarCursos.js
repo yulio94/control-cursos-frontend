@@ -1,15 +1,16 @@
 import React from "react";
 
-function ListCatedraticos(props) {
+function ListarCursos(props) {
   return (
-    <table className="table">
+    <table>
       <thead>
         <tr>
           <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Profesi&oacute;n</th>
-          <th>Correo</th>
-          <th>DPI</th>
+          <th>Descripcion</th>
+          <th>Creditos</th>
+          <th>Horario</th>
+          <th>Carrera</th>
+          <th>Catedratico</th>
         </tr>
       </thead>
       <tbody>
@@ -20,15 +21,15 @@ function ListCatedraticos(props) {
             <td>{props.data}</td>
             <td>{props.data}</td>
             <td>{props.data}</td>
+            <td>{props.data}</td>
           </tr>
         ) : (
           <tr>
-            <td>No hay catedraticos registrados</td>
+            <td>Noy hay cursos registrados</td>
           </tr>
         )}
       </tbody>
     </table>
   );
 }
-
-export default ListCatedraticos;
+export default ListarCursos;
