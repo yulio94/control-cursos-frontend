@@ -27,11 +27,11 @@ const api = {
   },
   catedraticos: {
     list() {
-      return callAPI("/catedraticos");
+      return callAPI("/catedraticos/");
     },
 
     create(catedratico) {
-      return callAPI("/catedraticos", {
+      return callAPI("/catedraticos/", {
         method: "POST",
         body: JSON.stringify(catedratico)
       });
@@ -56,11 +56,11 @@ const api = {
   },
   cursos: {
     list() {
-      return callAPI("/curso");
+      return callAPI("/curso/");
     },
 
     create(catedratico) {
-      return callAPI("/curso", {
+      return callAPI("/curso/", {
         method: "POST",
         body: JSON.stringify(catedratico)
       });
@@ -85,11 +85,11 @@ const api = {
   },
   carreras: {
     list() {
-      return callAPI("/carrera");
+      return callAPI("/carrera/");
     },
 
     create(catedratico) {
-      return callAPI("/carrera", {
+      return callAPI("/carrera/", {
         method: "POST",
         body: JSON.stringify(catedratico)
       });
@@ -114,11 +114,11 @@ const api = {
   },
   horarios: {
     list() {
-      return callAPI("/horario");
+      return callAPI("/horario/");
     },
 
     create(catedratico) {
-      return callAPI("/horario", {
+      return callAPI("/horario/", {
         method: "POST",
         body: JSON.stringify(catedratico)
       });
